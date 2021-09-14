@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const PostCardContainer = styled.div`
   width: 25vw;
-  margin: 30px;
+  margin: 10px 30px 30px 30px;
   border-radius: 5px;
   box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-  background-color: #f5f5f5;
+  background-color: #f2f2f2;
   @media screen and (max-width: 992px) {
     width: 80vw;
   }
@@ -29,15 +29,17 @@ font-size: small;
 `;
 
 export const NomeProduto = styled.p`
-  white-space: nowrap; 
-  width: 15em; 
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-family: 'Dosis', sans-serif;
+   white-space: nowrap; 
+    width: 15em; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 `
 
 export const ValorProduto = styled.p`
-  font-family: 'Dosis', sans-serif;
+`
+
+export const Quantidade = styled.div`
+padding: 3px;
 `
 
 export const RightContent = styled.div`
@@ -50,14 +52,12 @@ align-items: center;
 export const Botão = styled.button`
     background-color: #20ab77;
     border: none;
-    border-radius: 19px;
+    border-radius: 4px;
     color: #3c4043;
     font-family: arial,sans-serif;
     font-size: 14px;
     padding: 0 16px;
-    line-height: 27px;
-    height: 36px;
-    min-width: 54px;
+    line-height: 20px;
     text-align: center;
     cursor: pointer;
 `;

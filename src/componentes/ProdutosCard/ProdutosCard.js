@@ -1,38 +1,27 @@
 import React, { useContext } from "react";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import Typography from "@material-ui/core/Typography";
-import {
-  PostCardContainer,
-  PostCardContent,
-  Cima,
-  Baixo,
-  Botão
-} from "./Styled";
+import {PostCardContainer, PostCardContent, LeftContent , RightContent, Botão, NomeProduto, ValorProduto} from "./Styled";
 import GlobalStateContext from "../../Context/GlobalContextState";
 
-const PatientCard = (props) => {
-  const { requests } = useContext(GlobalStateContext);
+const ProdutosCard = (props) => {
+  const { requests, AdicionarProduto } = useContext(GlobalStateContext);
 
   return (
     <PostCardContainer>
       <PostCardContent>
-        <div>
-            <Cima>
-              <Typography gutterBottom variant="h8">
+            <LeftContent >
+              <NomeProduto>
               {props.name}
-              </Typography>
-              <Typography gutterBottom variant="subtitle1">
+              </NomeProduto>
+              <ValorProduto>
               R${props.price}
-              </Typography>
-            </Cima>
-           
-            <Baixo>
-              <Botão>Adicionar Ao Carrinho</Botão>
-            </Baixo>
-        </div>
+              </ValorProduto>
+            </LeftContent>
+            <RightContent>
+              <Botão onClick={() => AdicionarProduto(props.id, props.name, props.price, props.qty_stock)}>Adicionar</Botão>
+            </RightContent>
       </PostCardContent>
     </PostCardContainer>
   );
 };
 
-export default PatientCard;
+export default ProdutosCard;

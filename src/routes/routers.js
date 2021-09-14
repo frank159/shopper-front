@@ -1,7 +1,7 @@
 import React from "react"
 import { BrowserRouter, Switch, Route } from "react-router-dom"
 import { HomePage} from "../pages/homePage/homePage"
-import { PokeDetalhes} from "../pages/pokeDetalhes/PokeDetalhes"
+import { HistoricoPedidos } from "../pages/historicoPedidos/historicoPedidos"
 
 export const Router = () => {
     return(
@@ -10,8 +10,8 @@ export const Router = () => {
                 <Route exact path="/">
                     <HomePage />
                 </Route>
-                <Route exact path="/detalhes/:id">
-                    <PokeDetalhes />
+                <Route exact path="/historico">
+                    <HistoricoPedidos />
                 </Route>
             </Switch>
         </BrowserRouter>

@@ -1,36 +1,27 @@
-import React, { useContext, useEffect } from "react"
-import { useHistory } from "react-router-dom";
+import React, { useContext } from "react"
 import {HeaderHome} from "../../componentes/headerHome/headerHome"
-import PatientCard from "../../componentes/ProdutosCard/ProdutosCard"
+import ProdutosCard from "../../componentes/ProdutosCard/ProdutosCard"
 import GlobalStateContext from "../../Context/GlobalContextState"
-import { goToPokeDetalhes} from "../../routes/coordinator"
-import { Conteiner, CarrinhoConteiner, ProdutosCards } from "./Styled"git
-import {BASE_URL} from "../../constants/Url"
-import { Carrinho } from "../../componentes/Carrinho/Carrinho";
+import { Conteiner, CarrinhoConteiner, ProdutosCards, Paginaçao } from "./Styled"
+import Paginação from "../../componentes/PaginaçaoComponente/paginaçaoProdutos"
+
+import { Carrinho } from "./Carrinho";
 
 export const HomePage = () => {
-    const history = useHistory();
-    const { requests, getProdutos, loading, setLoading } = useContext(GlobalStateContext);
-    
-    useEffect(() => {
-      getProdutos()
-     },[])
-
-    const onClickCard = (id) => {
-      goToPokeDetalhes(history, id);
-    };
+    const { AdicionarProduto, requests, cart, currentProdutos } = useContext(GlobalStateContext);
 
     const ListaProdutos =
     !requests.loading &&
-    requests.produtos &&
-    requests.produtos.map((produtos) => {
+    currentProdutos &&
+    currentProdutos.map((produtos) => {
       return (
-      
-        <PatientCard
+        <ProdutosCard
           key={produtos.id}
+          id={produtos.id}
           name={produtos.name}
           price={produtos.price}
           qty_stock={produtos.qty_stock}
+          AdicionarProduto={AdicionarProduto}
         />
       );
     });
@@ -40,9 +31,12 @@ export const HomePage = () => {
             <Conteiner>
               <ProdutosCards>
                 {ListaProdutos}
+                <Paginaçao>
+                  <Paginação/>
+                </Paginaçao>      
               </ProdutosCards>
-              <CarrinhoConteiner>
-                <Carrinho/>
+                <CarrinhoConteiner>
+                <Carrinho cart={cart}/>
               </CarrinhoConteiner>
             </Conteiner>
         </div>
