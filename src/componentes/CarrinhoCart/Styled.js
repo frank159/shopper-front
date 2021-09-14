@@ -20,6 +20,7 @@ display: flex;
   @media screen and (max-width: 600px) {
     padding: 10px;
   }
+  font-family: 'Dosis', sans-serif;
 `;
 
 export const LeftContent  = styled.div`
@@ -54,7 +55,7 @@ export const Botão = styled.button`
     border: none;
     border-radius: 4px;
     color: #3c4043;
-    font-family: arial,sans-serif;
+    font-family: 'Dosis', sans-serif;
     font-size: 14px;
     padding: 0 16px;
     line-height: 20px;

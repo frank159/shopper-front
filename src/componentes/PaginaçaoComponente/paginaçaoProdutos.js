@@ -7,10 +7,11 @@ const Paginação = () => {
 
     return (
         Array.from(Array(pages), (produtos, index) => {
-            return (<Button  value={index} onClick={(e) => setCurrentePage(Number(e.target.value))}>
-                        {index + 1}
-                    </Button>)
-    })
-)}
+            return (<Button value={index} onClick={(e) => setCurrentePage(Number(e.target.value))}>
+                {index + 1}
+            </Button>)
+        })
+    )
+}
 
 export default Paginação;

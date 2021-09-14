@@ -6,7 +6,7 @@ export const Button = styled.button`
     margin: 5px;
     border-radius: 10px;
     color: #3c4043;
-    font-family: arial,sans-serif;
+    font-family: 'Dosis', sans-serif;
     font-size: 14px;
     padding: 0 16px;
     line-height: 27px;

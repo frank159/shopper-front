@@ -22,7 +22,7 @@ display: flex;
   }
 `;
 
-export const LeftContent  = styled.div`
+export const LeftContent = styled.div`
 margin-bottom: 15px;
 padding: 5px;
 font-size: small;
@@ -41,10 +41,10 @@ export const ValorProduto = styled.p`
 `
 
 export const RightContent = styled.div`
-display: flex;
-justify-content: right;
-margin: 0px 20px 0px 20px;
-align-items: center;
+  display: flex;
+  justify-content: right;
+  margin: 0px 20px 0px 20px;
+  align-items: center;
 `;
 
 export const Botão = styled.button`
@@ -52,7 +52,7 @@ export const Botão = styled.button`
     border: none;
     border-radius: 19px;
     color: #3c4043;
-    font-family: arial,sans-serif;
+    font-family: 'Dosis', sans-serif;
     font-size: 14px;
     padding: 0 16px;
     line-height: 27px;
