@@ -25,7 +25,6 @@ export const HomePage = () => {
         />
       );
     });
-
     return (
         <div className="conteiner">
             <HeaderHome/>

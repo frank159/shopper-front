@@ -4,7 +4,6 @@ import GlobalStateContext from "../../Context/GlobalContextState";
 
 const ProdutosCard = (props) => {
   const { requests, AdicionarProduto } = useContext(GlobalStateContext);
-  
 
   return (
     <PostCardContainer>

@@ -34,7 +34,6 @@ export const GlobalState = (props) => {
         window.alert(error.message)
       });
   };
-
 /////----paginaçao produtos----/////
 
   const pages = Math.ceil(produtos.length / produtosPorPage)

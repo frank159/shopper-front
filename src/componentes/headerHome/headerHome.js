@@ -44,7 +44,6 @@ export const HeaderHome = () => {
                 R$ {getTotalValue()}
                 </QuandtidaProdutos>
             </ConteinerInfo>
-            
        </Conteiner>
     )
 }

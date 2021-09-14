@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 export const PostCardContainer = styled.div`
   width: 25vw;
   margin: 30px;
