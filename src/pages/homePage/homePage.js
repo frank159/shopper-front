@@ -1,5 +1,4 @@
 import React, { useContext } from "react"
-import {HeaderHome} from "../../componentes/headerHome/headerHome"
 import ProdutosCard from "../../componentes/ProdutosCard/ProdutosCard"
 import GlobalStateContext from "../../Context/GlobalContextState"
 import { Conteiner, CarrinhoConteiner, ProdutosCards, Paginaçao } from "./Styled"
@@ -8,9 +7,9 @@ import Paginação from "../../componentes/PaginaçaoComponente/paginaçaoProdut
 import { Carrinho } from "./Carrinho";
 
 export const HomePage = () => {
-    const { AdicionarProduto, requests, cart, currentProdutos } = useContext(GlobalStateContext);
+  const { AdicionarProduto, requests, cart, currentProdutos } = useContext(GlobalStateContext);
 
-    const ListaProdutos =
+  const ListaProdutos =
     !requests.loading &&
     currentProdutos &&
     currentProdutos.map((produtos) => {
@@ -25,20 +24,21 @@ export const HomePage = () => {
         />
       );
     });
-    return (
-        <div className="conteiner">
-            <HeaderHome/>
-            <Conteiner>
-              <ProdutosCards>
-                {ListaProdutos}
-                <Paginaçao>
-                  <Paginação/>
-                </Paginaçao>      
-              </ProdutosCards>
-                <CarrinhoConteiner>
-                <Carrinho cart={cart}/>
-              </CarrinhoConteiner>
-            </Conteiner>
-        </div>
-    )
+
+  return (
+    <div className="conteiner">
+      <Conteiner>
+
+        <ProdutosCards>
+          {ListaProdutos}
+          <Paginaçao>
+            <Paginação />
+          </Paginaçao>
+        </ProdutosCards>
+        <CarrinhoConteiner>
+          <Carrinho cart={cart} />
+        </CarrinhoConteiner>
+      </Conteiner>
+    </div>
+  )
 }

@@ -8,16 +8,13 @@ export const Conteiner = styled.div`
 `;
 
 export const CarrinhoConteiner = styled.div`
-    position: fixed;
-    right: 0;
-    top: null;
-    background-color: white;
-    margin: 15px;
-    grid-column: 2/3;
-    height: 90vh;
-    border-radius: 5px;
-    float:left;
-    overflow-y: auto;
+  background-color: white;
+  margin: 15px;
+  grid-column: 2/3;
+  height: 90vh;
+  border-radius: 5px;
+  float:left;
+  overflow-y: auto;
   `
 
 export const ProdutosCards = styled.div`
@@ -40,25 +37,11 @@ export const Paginaçao = styled.div`
 `;
 
 export const ConteinerButton = styled.div`
-    position: fixed;
-    right: 0;
-    top: null;
-    background-color: white;
-    margin: 15px;
-    height: 90vh;
-    border-radius: 5px;
-`
-
-export const Button = styled.button`
-    background-color: #20ab77;
-    border: none;
-    margin: 5px;
-    border-radius: 10px;
-    color: #3c4043;
-    font-family: arial,sans-serif;
-    font-size: 14px;
-    padding: 0 16px;
-    line-height: 27px;
-    text-align: center;
-    cursor: pointer;
+  position: fixed;
+  right: 0;
+  top: null;
+  background-color: white;
+  margin: 15px;
+  height: 90vh;
+  border-radius: 5px;
 `

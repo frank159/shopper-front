@@ -7,12 +7,13 @@ const PaginaçaoCart = () => {
 
     return (
         Array.from(Array(pagesCart), (cart, index) => {
-            return( 
-                    <Button value={index} onClick={(e) => setCurrenteCartPage(Number(e.target.value))}>
-                        {index + 1}
-                    </Button>
-                )
-            })
-        )}
+            return (
+                <Button value={index} onClick={(e) => setCurrenteCartPage(Number(e.target.value))}>
+                    {index + 1}
+                </Button>
+            )
+        })
+    )
+}
 
 export default PaginaçaoCart;

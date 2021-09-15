@@ -1,23 +1,8 @@
 import styled from 'styled-components'
-import fron_const from "../../constants/const"
 
 export const ShopperBotao = styled.input`
 height: 25px;
 padding: 5px;
-`
-
-export const Button = styled.button`
-    background-color: #20ab77;
-    border: none;
-    margin: 5px;
-    border-radius: 10px;
-    color: #3c4043;
-    font-family: fron_const;
-    font-size: 14px;
-    padding: 0 16px;
-    line-height: 27px;
-    text-align: center;
-    cursor: pointer;
 `
 
 export const QuandtidaProdutos = styled.div`
@@ -26,7 +11,7 @@ export const QuandtidaProdutos = styled.div`
     margin: 5px;
     border-radius: 10px;
     color: #3c4043;
-    font-family: arial,sans-serif;
+    font-family: 'Dosis', sans-serif;
     font-size: 14px;
     padding: 0 16px;
     line-height: 27px;
@@ -39,7 +24,7 @@ export const PreçoTotal = styled.div`
     margin: 5px;
     border-radius: 10px;
     color: #3c4043;
-    font-family: arial,sans-serif;
+    font-family: 'Dosis', sans-serif;
     font-size: 14px;
     padding: 0 16px;
     line-height: 27px;
@@ -57,6 +42,7 @@ export const Conteiner = styled.div`
     text-align: center;
     height: 35px;
     justify-content: space-between;
+    z-index: 1;
 `
 export const ConteinerButton = styled.div`
     display: flex;
