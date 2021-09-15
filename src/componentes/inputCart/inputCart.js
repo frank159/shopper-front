@@ -27,8 +27,6 @@ const ImputCart = () => {
                     carrinho: [...cart]
                 }
                 setCompras(compra)
-                document.location.reload(true);
-                window.alert("pedido enviado!")
                 localStorage.setItem("compras", JSON.stringify(compras))
             })
             .catch((error) => {
@@ -65,7 +63,7 @@ const ImputCart = () => {
             </ConteinerInput>
             <ConteinerButton>
                 <PaginaçaoCart />
-                <Button onClick={EnviarPedido}>Enviar</Button>
+                <Button onClick={() => EnviarPedido()}>Enviar</Button>
             </ConteinerButton>
         </Conteiner>
     )
