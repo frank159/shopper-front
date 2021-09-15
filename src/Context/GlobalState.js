@@ -29,7 +29,7 @@ export const GlobalState = (props) => {
       .then((res) => {
         setProdutos(res.data.shopper)
         setLoading(false)
-        setCompras(JSON.parse(localStorage.getItem("setCompras")) || [])
+        setCompras(JSON.parse(localStorage.getItem("compras")) || [])
       })
       .catch((error) => {
         window.alert(error.message)
