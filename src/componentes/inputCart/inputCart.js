@@ -20,7 +20,7 @@ const ImputCart = () => {
                 .post(`${BASE_URL}/update/${cart[i].id}`, body)
             requests.push(request)
         }
-        axios.all(requests)
+        Promise.all(requests)
             .then(() => {
                 const compra = {
                     cliente: form,
